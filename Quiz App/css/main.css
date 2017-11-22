@@ -1,3 +1,7 @@
-.hidden{
+#quiz{
   display: none;
+}
+
+.question, .answers {
+  display: block;
 }
