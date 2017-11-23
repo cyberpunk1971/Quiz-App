@@ -53,147 +53,250 @@ number: 4
 
   {
      'question':'In what year did the first human orbit the earth?',
-          'answer': {
-            '1': 1975,
-            '2': 1961,
-            '3': 1969,
-            '4': 1989
-          },
-          'number': 2,
-          'correctAnswer': 2
+          'answer':  [
+      {
+      value: 1975,
+      number: 1
       },
+      { value: 1961,
+      number: 2
+      },
+      { value:1969,
+      number: 3
+      },
+      { value:1989,
+      number: 4
+      },
+      ],
+              'questionNumber': 2,
+              'correctAnswer': 2
+            },
+
+
 
       {
         'question':'What was the name of America\'s first manned space program?',
-          'answer': {
-            '1': 'Gemini',
-            '2': 'Apollo',
-            '3': 'Mercury',
-            '4': 'Odin'
-          },
-          'number': 3,
-          'correctAnswer': 3
+          'answer': [
+      {
+      value: 'Gemini',
+      number: 1
       },
+      { value: 'Apollo',
+      number: 2
+      },
+      { value: 'Mercury',
+      number: 3
+      },
+      { value: 'Odin',
+      number: 4
+      },
+      ],
+              'questionNumber': 3,
+              'correctAnswer': 3
+            },
 
       {
         'question': ' In what year did Man first land on the moon?',
-          'answer': {
-            '1': 1972,
-            '2': 1973,
-            '3': 1969,
-            '4': 1944
-          },
-          'number': 4,
-          'correctAnswer': 3
+          'answer': [
+      {
+      value: '1972',
+      number: 1
       },
+      { value: '1973',
+      number: 2
+      },
+      { value: '1969',
+      number: 3
+      },
+      { value: '1944',
+      number: 4
+      },
+      ],
+              'questionNumber': 4,
+              'correctAnswer': 3
+            },
 
       {
         'question': 'Who said, "One small step for Man, one giant leap for Mankind"?',
-          'answer': {
-            '1': 'John Glenn',
-            '2': 'Gus Grissom',
-            '3': 'Neil Armstrong',
-            '4': 'Scooby Doo'
-          },
-          'number': 5,
-          'correctAnswer': 3
+          'answer':[
+      {
+      value: 'John Glenn',
+      number: 1
       },
+      { value: 'Gus Grissom',
+      number: 2
+      },
+      { value: 'Neil Armstrong',
+      number: 3
+      },
+      { value: 'Scooby Doo',
+      number: 4
+      },
+      ],
+              'questionNumber': 5,
+              'correctAnswer': 3
+            },
 
       {
         'question': 'Who was the first Man to step onto the moon\'s surface?',
-          'answer': {
-            '1': 'Neil Armstrong',
-            '2': 'Vladimir Putin',
-            '3': 'John Glenn',
-            '4': 'Yuri Gagarin'
-          },
-          'number': 6,
-          'correctAnswer': 1
+          'answer':[
+      {
+      value: 'Neil Armstrong',
+      number: 1
       },
+      { value: 'Vladimir Putin',
+      number: 2
+      },
+      { value: 'John Glenn',
+      number: 3
+      },
+      { value: 'Yuri Gagarin',
+      number: 4
+      },
+      ],
+              'questionNumber': 6,
+              'correctAnswer': 1
+            },
 
       {
         'question': 'Who was the first female astronaut?',
-          'answer': {
-            '1': 'Sally Ride',
-            '2': 'Valentina Tereshkova',
-            '3': 'Jane Smith',
-            '4': 'Lady Gaga'
-          },
-          'number': 7,
-          'correctAnswer': 2
+          'answer': [
+      {
+      value: 'Sally Ride',
+      number: 1
       },
+      { value: 'Valentina Tereshkova',
+      number: 2
+      },
+      { value: 'Jane Smith',
+      number: 3
+      },
+      { value: 'Lady Gaga',
+      number: 4
+      },
+      ],
+              'questionNumber': 7,
+              'correctAnswer': 2
+            },
 
       {
         'question': 'Who was the first mom to travel to space?',
-          'answer': {
-            '1': 'Valentina Tereshkova',
-            '2': 'Sally Ride',
-            '3': 'Anna Fisher',
-            '4': 'Lady Gaga'
-          },
-          'number': 8,
-          'correctAnswer': 3
+          'answer': [
+      {
+      value: 'Valentina Tereshkova',
+      number: 1
       },
+      { value: 'Sally Ride',
+      number: 2
+      },
+      { value: 'Anna Fisher',
+      number: 3
+      },
+      { value: 'Lady Gaga',
+      number: 4
+      },
+      ],
+              'questionNumber': 8,
+              'correctAnswer': 3
+            },
 
       {
         'question': 'What was the name of the first spacecraft on Mars?',
-          'answer': {
-              '1': 'Mars 3',
-              '2': 'Viking 1',
-              '3': 'Good Luck 1',
-              '4': 'Good Bye 1'
-          },
-          'number': 9,
-          'correctAnswer': 1
+          'answer': [
+      {
+      value: 'Mars 3',
+      number: 1
       },
+      { value: 'Viking 1',
+      number: 2
+      },
+      { value: 'Good Luck 1',
+      number: 3
+      },
+      { value: 'Good Bye 1',
+      number: 4
+      },
+      ],
+              'questionNumber': 9,
+              'correctAnswer': 1
+            },
 
       {
         'question': 'In what year did the first Mars landing occur?',
-          'answer': {
-            '1': '1975',
-            '2': '1966',
-            '3': '1969',
-            '4': '1971'
-          },
-          'number': 10,
-          'correctAnswer': 4
-      }
+          'answer': [
+      {
+      value: 1975,
+      number: 1
+      },
+      { value: 1966,
+      number: 2
+      },
+      { value: 1969,
+      number: 3
+      },
+      { value: 1971,
+      number: 4
+      },
+      ],
+              'questionNumber': 10,
+              'correctAnswer': 1
+            },
     ]
-    //place loop for questions here, increment int as var see https://www.freecodecamp.org/challenges/increment-a-number-with-javascript
+    //place loop for questions here, increment int as var see
+
     $(function() {
       $('#start').on('click', function() {
         $('.container').hide(1000);
-        $('#quiz').show(function() {
+        $(' #count ').html(pageNumber);
+          $('#quiz').show(function() {
           showQuestion(0);
         });
-
       });
     });
 
 
+
+
+  var pageNumber = 1;
+    $(function() {
+      $('.js-next').on('click', function(event) {
+        event.preventDefault();
+        showQuestion(pageNumber);
+        pageNumber++;
+        $(' #count ').html(pageNumber);
+       //code for question number here
+      });
+    });
+      //write function to tell quiz it's over
+      //need to score answer, keep score,
+      //disable next button on each question until is answered
+
+
+    //
+    //
     function showQuestion(number) {
-      $('.js-question').html(theQuestionsAndAnswers[number].question);
       generateAnswersHTML(theQuestionsAndAnswers[number].answer);
-
+      generateQuestionHTML(theQuestionsAndAnswers[number].question);
     };
 
-    function generateQuestionHTML(question, answers) {
-      //code here is similar to generateAnswersHTML
+
+    function generateQuestionHTML(question) {
+      var  questionNumber = '<h2>' + question + '</h2>'
+      $('.js-question').html(questionNumber);
     };
+
 
     function generateAnswersHTML(answers) {
-      // console.dir(answers);
       var answerList = '';
       for(i = 0; i < answers.length; i++) {
         let item = answers[i];
-        // console.log(item);
         answerList += '<input type="radio" name="q-one" value="' + item.number + '">' + item.value + '';
-
-
-      };
-      $('.js-question').html(answerList);
+        };
+      $('.js-answer').html(answerList);
     };
 
+
+    // generateAnswersHTML();
     // function handleQuiz() {
       // showQuestion();
     //   generateQuestionHTML();
