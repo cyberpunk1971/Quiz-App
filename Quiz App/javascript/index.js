@@ -247,7 +247,7 @@ number: 4
     $(function() {
       $('#start').on('click', function() {
         $('.container').hide(1000);
-        $(' #count ').html(pageNumber);
+        $(' #count ').html(pageNumber); //<------renders question count
           $('#quiz').show(function() {
           showQuestion(0);
         });
@@ -263,7 +263,7 @@ number: 4
         event.preventDefault();
         showQuestion(pageNumber);
         pageNumber++;
-        $(' #count ').html(pageNumber);
+        $(' #count ').html(pageNumber); //<------renders question count
        //code for question number here
       });
     });
