@@ -1,7 +1,13 @@
-#quiz{
+#quiz, .show-results {
   display: none;
 }
 
 .question, .answers {
   display: block;
+}
+
+.show-results {
+  background-color: red;
+  text-align: center;
+  font-size: 50px;
 }

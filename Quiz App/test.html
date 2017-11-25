@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>History of Human Spaceflight Quiz</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/grid.css">
   </head>
   <body>
   <div class="row">
@@ -12,7 +13,7 @@
     <button id="start">Begin</button>
     </div>
   <div id="quiz">
-    <form>
+    <form class="page">
       <div class="js-question"></div>
       <div class="js-answer"></div>
 
@@ -21,11 +22,17 @@
 
       <div class="js-count">Question <span id="count"> x </span> of 10</div>
     </form>
+    <div>
+      <button class="results">Results</button>
+    </div>
+
+  </div>
+  <div class="show-results row"><span id="amount"> x </span> out of 10 correct.
+    <input type="button" id="restart" name="restart" value="Restart Quiz"> 
   </div>
 
 
-
-  </div>
+</div>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
     <script src="javascript/index.js"></script>
   </body>

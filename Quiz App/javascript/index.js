@@ -29,27 +29,30 @@
 
 
 
-const theQuestionsAndAnswers = [
+const quizArray = [
   {
     'question':'What was the name of the first human astronaut?',
     'answer': [
-{
-value: 'Yuri Gagarin',
-number: 1
-},
-{ value: 'John Glenn',
-number: 2
-},
-{ value: 'Alan Shepard',
-number: 3
-},
-{ value: 'Lady Gaga',
-number: 4
-},
-],
-        'questionNumber': 1,
-        'correctAnswer': 1
-      },
+        {
+          value: 'Yuri Gagarin',
+          number: 1
+        },
+        {
+          value: 'John Glenn',
+          number: 2
+        },
+        {
+          value: 'Alan Shepard',
+          number: 3
+        },
+        {
+          value: 'Lady Gaga',
+          number: 4
+        },
+      ],
+      'questionNumber': 1,
+      'correctAnswer': 1
+  },
 
   {
      'question':'In what year did the first human orbit the earth?',
@@ -242,18 +245,21 @@ number: 4
               'correctAnswer': 1
             },
     ]
-    //place loop for questions here, increment int as var see
+
+
+
 
     $(function() {
       $('#start').on('click', function() {
         $('.container').hide(1000);
+        $('.results').hide();
+        $('.show-results').hide();
         $(' #count ').html(pageNumber); //<------renders question count
-          $('#quiz').show(function() {
+        $('#quiz').show(function() {
           showQuestion(0);
         });
       });
     });
-
 
 
 
@@ -264,9 +270,32 @@ number: 4
         showQuestion(pageNumber);
         pageNumber++;
         $(' #count ').html(pageNumber); //<------renders question count
-       //code for question number here
+        if(pageNumber == 10) {
+        results();
+
+      };
+
       });
     });
+
+
+    function results() {
+      $('.results').show(1000);
+      $('.results').on('click', function() {
+      $('#quiz').hide(1000);
+      $('.show-results').show(1000);
+      });
+    };
+
+
+  //   function clickCount() {
+  //     let count = 0;
+  //     $('.js-next').on('click', function() {
+  //       count <= 9;
+  //       $('#quiz').hide();
+  //     $('.results').show();
+  //   });
+  // };
       //write function to tell quiz it's over
       //need to score answer, keep score,
       //disable next button on each question until is answered
@@ -274,9 +303,9 @@ number: 4
 
     //
     //
-    function showQuestion(number) {
-      generateAnswersHTML(theQuestionsAndAnswers[number].answer);
-      generateQuestionHTML(theQuestionsAndAnswers[number].question);
+    function showQuestion(bananas) {
+      generateAnswersHTML(quizArray[bananas].answer);
+      generateQuestionHTML(quizArray[bananas].question);
     };
 
 
