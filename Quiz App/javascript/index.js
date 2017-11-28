@@ -54,26 +54,26 @@ const quizArray = [
       'correctAnswer': 1
   },
 
-  {
-     'question':'In what year did the first human orbit the earth?',
-          'answer':  [
-      {
-      value: 1975,
-      number: 1
+    {
+       'question':'In what year did the first human orbit the earth?',
+            'answer':  [
+        {
+        value: 1975,
+        number: 1
+        },
+        { value: 1961,
+        number: 2
+        },
+        { value:1969,
+        number: 3
+        },
+        { value:1989,
+        number: 4
+        },
+        ],
+        'questionNumber': 2,
+        'correctAnswer': 2
       },
-      { value: 1961,
-      number: 2
-      },
-      { value:1969,
-      number: 3
-      },
-      { value:1989,
-      number: 4
-      },
-      ],
-              'questionNumber': 2,
-              'correctAnswer': 2
-            },
 
 
 
@@ -246,7 +246,25 @@ const quizArray = [
             },
     ]
 
+    var correct = 0
+      function correctGuess() {
+        correct += 1;
 
+      }
+
+      function rightOrWrong(questionNumber, userAnswer) {
+      var questionObject = questionNumber - 1;
+      var obj = quizArray[questionObject];
+
+      console.dir(obj);
+      console.log(userAnswer);
+      if(userAnswer == obj.correctAnswer) {
+        console.log('correct');
+      } else {
+        console.log('wrong');
+      }
+
+      }
 
 
     $(function() {
@@ -277,36 +295,40 @@ const quizArray = [
 
       });
     });
-
+    //
+    // `$("input[type=submit]").attr("disabled", "disabled");`
+    //
+    //
+    // [6:21]
+    // `$("input[type=submit]").attr("disabled", "enabled");`
+    //
+    //
+    // [6:21]
+    // `<button disabled="disabled">Next</button>`
+    //
+    //
+    // [6:22]
+    // `<button disabled="enabled">Next</button>`
+    // need functionality for one choice only
 
     function results() {
       $('.results').show(1000);
       $('.results').on('click', function() {
       $('#quiz').hide(1000);
       $('.show-results').show(1000);
+      $('#restart').show();
       });
     };
 
 
-  //   function clickCount() {
-  //     let count = 0;
-  //     $('.js-next').on('click', function() {
-  //       count <= 9;
-  //       $('#quiz').hide();
-  //     $('.results').show();
-  //   });
-  // };
-      //write function to tell quiz it's over
-      //need to score answer, keep score,
-      //disable next button on each question until is answered
-
-
-    //
-    //
     function showQuestion(bananas) {
       generateAnswersHTML(quizArray[bananas].answer);
       generateQuestionHTML(quizArray[bananas].question);
+      $('input[type="radio"]').on('click', function() {
+      rightOrWrong(quizArray[bananas].questionNumber, $(this).val());
+      })
     };
+
 
 
     function generateQuestionHTML(question) {
@@ -323,13 +345,3 @@ const quizArray = [
         };
       $('.js-answer').html(answerList);
     };
-
-
-    // generateAnswersHTML();
-    // function handleQuiz() {
-      // showQuestion();
-    //   generateQuestionHTML();
-    //   generateAnswersHTML();
-    // }
-    //
-    // $(handleQuiz);
