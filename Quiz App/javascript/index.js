@@ -259,9 +259,10 @@ const quizArray = [
       console.dir(obj);
       console.log(userAnswer);
       if(userAnswer == obj.correctAnswer) {
-        console.log('correct');
+        $('#display-right-or-wrong').html('Correct!');
+        // console.log('correct');
       } else {
-        console.log('wrong');
+        $('#display-right-or-wrong').html('Wrong!');
       }
 
       }
@@ -287,6 +288,7 @@ const quizArray = [
         event.preventDefault();
         showQuestion(pageNumber);
         pageNumber++;
+        $('#display-right-or-wrong').html('');
         $(' #count ').html(pageNumber); //<------renders question count
         if(pageNumber == 10) {
         results();
@@ -295,6 +297,14 @@ const quizArray = [
 
       });
     });
+
+    function answerRequired() {
+      $('.js-next').attr('disabled', true);
+      $('input[type="radio"]').on('click', function() {
+        $('.js-next').attr('disabled', false);
+      });
+    }
+
     //
     // `$("input[type=submit]").attr("disabled", "disabled");`
     //
