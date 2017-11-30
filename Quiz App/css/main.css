@@ -1,4 +1,4 @@
-#quiz, .show-results, #restart {
+#quiz, .show-results, #restart, .results, #end {
   display: none;
   text-align: center;
 }
@@ -9,7 +9,6 @@
 }
 
 .show-results {
-
   text-align: center;
   font-size: 50px;
 }
@@ -30,4 +29,9 @@
 
 header {
   font-size: 50px;
+}
+
+.js-next, #start {
+  margin-bottom: 2em;
+  margin-top: 2em;
 }

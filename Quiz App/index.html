@@ -1,126 +1,41 @@
-  <!-- <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="utf-8">
-      <title>History of Human Spaceflight Quiz App</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="css/grid.css">
-      <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body>
-      <div class="row">
-      <div class="col-12" id="start">
-        <header role="banner">History of Human Spaceflight Quiz</header>
-        <input type="button" id="js-start-button" value="Begin" onclick="beginQuiz();">
-      </div>
-
-      <form id="quiz" name="quiz">
-
-      <div class="col-12 hidden" id="question-one">
-        <p>question 1: What was the name of the first human astronaut?</p>
-        <input type="radio" id="buttons" name="q_one" value="Yuri Gagarin">Yuri Gagarin<br>
-        <input type="radio" id="buttons" name="q_one" value="John Glenn">John Glenn<br>
-        <input type="radio" id="buttons" name="q_one" value="Alan Shepard">Alan Shepard<br>
-        <input type="radio" id="buttons" name="q_one" value="Lady Gaga">Lady Gaga<br>
-        <input type="button" id="check" name="check" value="check" onclick="checkAnswer();"><br>
-        <input type="button" id="next" name="next" value="next" onclick="nextQuestion();">
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>History of Human Spaceflight Quiz</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/grid.css">
+  </head>
+  <body>
+  <div class="row">
+    <div class="container">
+    <header role="banner">History of Human Space Flight Quiz</header>
+    <button id="start">Begin</button>
+    </div>
+  <div id="quiz">
+    <form class="page">
+      <div class="js-question"></div>
+      <div class="js-answer"></div>
 
 
-      <div class="hidden" id="question-two">
-        <p>question 2: In what year did the first human orbit the earth?</p>
-        <input type="radio" id="buttons" name="q-two" value="1975">1975<br>
-        <input type="radio" id="buttons" name="q-two" value="1961">1961<br>
-        <input type="radio" id="buttons" name="q-two" value="1969">1969<br>
-        <input type="radio" id="buttons" name="q-two" value="1989">1989<br>
-        <input type="button" id="next" name="next" value="next" onclick="nextQuestion();">
-      </div>
+      <button class="js-next">Next</button>
 
-
-      <div class="hidden" id="question-three">
-         <p>question 3: What was the name of America's first manned space program?</p>
-         <input type="radio" id="buttons" name="q-three" value="Gemini">Gemini<br>
-         <input type="radio" id="buttons" name="q-three" value="Apollo">Apollo<br>
-         <input type="radio" id="buttons" name="q-three" value="Mercury">Mercury<br>
-         <input type="radio" id="buttons" name="q-three" value="Odin">Odin<br>
-         <input type="button" id="next" name="next" value="next" onclick="nextQuestion();">
-      </div>
-
-
-      <div class="hidden" id="question-four">
-        <p>question 4: In what year did Man first land on the moon?</p>
-        <input type="radio" id="buttons" name="q-four" value="1972">1972<br>
-        <input type="radio" id="buttons" name="q-four" value="1973">1973<br>
-        <input type="radio" id="buttons" name="q-four" value="1969">1969<br>
-        <input type="radio" id="buttons" name="q-four" value="1944">1944<br>
-        <input type="button" id="next" name="next" value="next" onclick="nextQuestion();">
-      </div>
-
-
-      <div class="hidden" id="question-five">
-        <P>question 5: Who said, "One small step for Man, one giant leap for Mankind"?</P>
-         <input type="radio" id="buttons" name="q-five" value="John Glenn">John Glenn<br>
-         <input type="radio" id="buttons" name="q-five" value="Gus Grissom">Gus Grissom<br>
-         <input type="radio" id="buttons" name="q-five" value="Neil Armstrong">Neil Armstrong<br>
-         <input type="radio" id="buttons" name="q-five" value="Scooby Doo">Scooby Doo<br>
-         <input type="button" id="next" name="next" value="next" onclick="nextQuestion();">
-      </div>
-
-
-      <div class="hidden" id="question-six">
-        <p>question 6: Who was the first Man to step onto the moon's surface?</p>
-        <input type="radio" id="buttons" name="q-six" value="Neil Armstrong">Neil Armstrong<br>
-        <input type="radio" id="buttons" name="q-six" value="Vladimir Putin">Vladimir Putin<br>
-        <input type="radio" id="buttons" name="q-six" value="John Glenn">John Glenn<br>
-        <input type="radio" id="buttons" name="q-six" value="Yuri Gagarin">Yuri Gagarin<br>
-        <input type="button" id="next" name="next" value="next" onclick="nextQuestion();">
-      </div>
-
-
-
-      <div class="hidden" id="question-seven">
-        <p>question 7: Who was the first female astronaut?</p>
-         <input type="radio" id="buttons" name="q-seven" value="Sally Ride">Sally Ride<br>
-         <input type="radio" id="buttons" name="q-seven" value="Valentina Tereshkova">Valentina Tereshkova<br>
-         <input type="radio" id="buttons" name="q-seven" value="Jane Smith">Jane Smith<br>
-         <input type="radio" id="buttons" name="q-seven" value="Lady Gaga">Lady Gaga<br>
-         <input type="button" id="next" name="next" value="next" onclick="nextQuestion();">
-      </div>
-
-
-      <div class="hidden" id="question-eight">
-        <p>question 8: Who was the first mom to travel to space?</p>
-        <input type="radio" id="buttons" name="q-eight" value="Valentina Tereshkova">Valentina Tereshkova<br>
-        <input type="radio" id="buttons" name="q-eight" value="Sally Ride">Sally Ride<br>
-        <input type="radio" id="buttons" name="q-eight" value="Anna Fisher">Anna Fisher<br>
-        <input type="radio" id="buttons" name="q-eight" value="Lady Gaga">Lady Gaga<br>
-        <input type="button" id="next" name="next" value="next" onclick="nextQuestion();">
-      </div>
-
-
-
-      <div class="hidden" id="question-nine">
-       <p>question 9: What was the name of the first spacecraft on Mars?</p>
-       <input type="radio" id="buttons" name="q-nine" value="Mars 3">Mars 3<br>
-       <input type="radio" id="buttons" name="q-nine" value="Viking 1">Viking 1<br>
-       <input type="radio" id="buttons" name="q-nine" value="Good Luck 1">Good Luck 1<br>
-       <input type="radio" id="buttons" name="q-nine" value="Good Bye">Good Bye 1<br>
-       <input type="button" id="next" name="next" value="next" onclick="nextQuestion();">
-      </div>
-
- 
-     <div class="hidden" id="question-ten">
-      <p>question 10: In what year did the first Mars landing occur?</p>
-        <input type="radio" id="buttons" name="q-ten" value="1975">1975<br>
-        <input type="radio" id="buttons" name="q-ten" value="1966">1966<br>
-        <input type="radio" id="buttons" name="q-ten" value="1969">1969<br>
-        <input type="radio" id="buttons" name="q-ten" value="1971">1971<br>
-        <input type="button" id="next" name="next" value="next" onclick="nextQuestion();">
-      </div>
+      <div class="js-count">Question <span id="count"> x </span> of 10</div>
     </form>
+    <div>
+      <button class="results">Results</button>
+    </div>
 
-      </div>
-      <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-      <script src="javascript/index.js"></script>
-    </body>
-  </html> -->
+  </div>
+  <div class="show-results row"><span id="amount"> x </span> out of 10 correct.</div>
+    <div class="restart-button">
+    <input type="button" id="restart" name="restart" value="Restart Quiz">
+  </div>
+  <div>
+    <h2 id="display-right-or-wrong"><h2>
+  </div>
+</div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="javascript/main.js"></script>
+  </body>
+</html>
