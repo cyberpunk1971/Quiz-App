@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>History of Human Spaceflight Quiz</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+  </head>
+  <body>
+  <div class="row">
+    <div class="container">
+    <header role="banner">History of Human Space Flight Quiz</header>
+    <button id="start">Begin</button>
+    </div>
+  <div id="quiz">
+    <form class="page">
+      <fieldset>
+        <legend hidden="true">Quiz with multiple choice answers</legend>
+      <div class="js-question"></div>
+      <div class="js-answer"></div>
+        <button class="js-check-answer" disabled="disabled" aria-label="Check Answer">Check</button>
+        <button class="js-next" aria-label="Next">&longrightarrow;</button>
+      <div class="js-count">Question <span id="count"> x </span> of 10</div>
+
+
+      </fieldset>
+    </form>
+    <div>
+      <button class="results">Results</button>
+    </div>
+</div>
+  <div class="show-results row"><span id="amount"> 0 </span> out of 10 correct.</div>
+    <div class="restart-button">
+    <input type="button" id="restart" name="restart" value="Restart">
+  </div>
+  <div>
+    <h2 id="display-right-or-wrong"></h2>
+
+
+  </div>
+</div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="javascript/index.js"></script>
+  </body>
+</html>
